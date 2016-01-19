@@ -12,5 +12,11 @@ class MainServletSpec extends MutableScalatraSpec {
         status === 200
       }
     }
+
+    "should return \"Hello, World!\"" >> {
+      get("/") {
+        response.body === "Hello, World!"
+      }
+    }
   }
 }
