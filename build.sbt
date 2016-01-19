@@ -7,11 +7,6 @@ lazy val Organization = "it.chalmers"
 lazy val ScalaVersion = "2.11.7"
 lazy val ScalatraVersion = "2.4.0"
 
-// Dependencies
-lazy val scalatra = "org.scalatra" %% "scalatra" % ScalatraVersion
-lazy val scalatra_specs2 = "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test"
-lazy val servlet = "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
-
 lazy val root = (project in file("."))
   // Project information
   .settings(
@@ -26,9 +21,9 @@ lazy val root = (project in file("."))
   // Dependencies
   .settings(
     libraryDependencies ++= Seq(
-      scalatra,
-      scalatra_specs2,
+      "org.scalatra" %% "scalatra" % ScalatraVersion,
+      "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
 
-      servlet
+      "javax.servlet" % "javax.servlet-api" % "3.1.0" % "provided"
     )
   )
