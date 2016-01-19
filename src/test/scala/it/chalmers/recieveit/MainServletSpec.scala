@@ -8,7 +8,9 @@ class MainServletSpec extends MutableScalatraSpec {
 
   "GET on /" >> {
     "should return 200" >> {
-      status === 200
+      get("/") {
+        status === 200
+      }
     }
   }
 }
