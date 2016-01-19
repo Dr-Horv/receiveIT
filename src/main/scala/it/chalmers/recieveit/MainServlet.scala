@@ -8,4 +8,9 @@ class MainServlet extends ScalatraServlet {
     Ok("Hello, World!")
   }
 
+  get("/:name") {
+    val name = params("name")
+    Ok(s"Hello, $name!")
+  }
+
 }
