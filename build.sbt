@@ -9,6 +9,7 @@ lazy val ScalatraVersion = "2.4.0"
 
 // Dependencies
 lazy val scalatra = "org.scalatra" %% "scalatra" % ScalatraVersion
+lazy val scalatra_specs2 = "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test"
 
 lazy val root = (project in file("."))
   // Project information
@@ -24,6 +25,7 @@ lazy val root = (project in file("."))
   // Dependencies
   .settings(
     libraryDependencies ++= Seq(
-      scalatra
+      scalatra,
+      scalatra_specs2
     )
   )
