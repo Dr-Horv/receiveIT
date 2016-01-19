@@ -5,13 +5,25 @@ lazy val Organization = "it.chalmers"
 
 // Tool versions and settings
 lazy val ScalaVersion = "2.11.7"
+lazy val ScalatraVersion = "2.4.0"
+
+// Dependencies
+lazy val scalatra = "org.scalatra" %% "scalatra" % ScalatraVersion
 
 lazy val root = (project in file("."))
+  // Project information
   .settings(
     name := Name,
     version := Version,
     organization := Organization
   )
+  // Tool versions and settings
   .settings(
     scalaVersion := ScalaVersion
+  )
+  // Dependencies
+  .settings(
+    libraryDependencies ++= Seq(
+      scalatra
+    )
   )
