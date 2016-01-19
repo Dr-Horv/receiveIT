@@ -19,4 +19,18 @@ class MainServletSpec extends MutableScalatraSpec {
       }
     }
   }
+
+  "GET on /saser" >> {
+    "should return 200" >> {
+      get("/saser") {
+        status === 200
+      }
+    }
+
+    "should return \"Hello, saser!\"" >> {
+      get("/saser") {
+        response.body === "Hello, saser!"
+      }
+    }
+  }
 }
