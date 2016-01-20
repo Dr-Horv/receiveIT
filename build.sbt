@@ -13,3 +13,5 @@ libraryDependencies ++= Seq(
 
   "org.eclipse.jetty" % "jetty-webapp" % "9.3.6.v20151106"
 )
+
+enablePlugins(JettyPlugin)
