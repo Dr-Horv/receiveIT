@@ -11,7 +11,7 @@ libraryDependencies ++= Seq(
   "org.scalatra" %% "scalatra" % ScalatraVersion,
   "org.scalatra" %% "scalatra-specs2" % ScalatraVersion % "test",
 
-  "org.eclipse.jetty" % "jetty-webapp" % "9.3.6.v20151106"
+  "javax.servlet" % "javax.servlet-api" % "3.1.0"
 )
 
 enablePlugins(JettyPlugin)
