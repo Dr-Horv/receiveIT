@@ -1,4 +1,4 @@
-package it.chalmers.recieveit
+package it.chalmers.receiveit
 
 import org.scalatra._
 

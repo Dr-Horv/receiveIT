@@ -1,4 +1,4 @@
-import it.chalmers.recieveit._
+import it.chalmers.receiveit._
 import org.scalatra._
 import javax.servlet.ServletContext
 

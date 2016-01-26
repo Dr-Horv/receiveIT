@@ -1,1 +1,1 @@
-# recieveIT
+# receiveIT
