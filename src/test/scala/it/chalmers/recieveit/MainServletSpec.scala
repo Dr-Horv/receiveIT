@@ -7,15 +7,9 @@ class MainServletSpec extends MutableScalatraSpec {
   addServlet(classOf[MainServlet], "/*")
 
   "GET on /" >> {
-    "should return 200" >> {
+    "should return 404" >> {
       get("/") {
-        status === 200
-      }
-    }
-
-    "should return \"Hello, World!\"" >> {
-      get("/") {
-        response.body === "Hello, World!"
+        status === 404
       }
     }
   }
