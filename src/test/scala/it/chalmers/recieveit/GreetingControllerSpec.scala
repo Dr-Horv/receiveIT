@@ -34,4 +34,18 @@ class GreetingControllerSpec extends MutableScalatraSpec {
     }
   }
 
+  "GET on /greeting/First%20Last" >> {
+    "should return 200" >> {
+      get("/greeting/First%20Last") {
+        status === 200
+      }
+    }
+
+    "should return \"Hello, First Last!\"" >> {
+      get("/greeting/First%20Last") {
+        response.body === "Hello, First Last!"
+      }
+    }
+  }
+
 }
